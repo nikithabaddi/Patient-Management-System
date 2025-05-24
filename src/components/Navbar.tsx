@@ -8,33 +8,33 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-sm">
+    <nav className="bg-pink-300 border-b border-pink-400 shadow-sm text-pink-900">
       <div className="max-w-7xl lg:max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <button
               type="button"
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-pink-900 hover:text-pink-700 hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500"
               onClick={onMenuClick}
             >
               <span className="sr-only">Open sidebar</span>
               <Menu className="h-6 w-6" aria-hidden="true" />
             </button>
             <div className="flex-shrink-0 flex items-center mx-4">
-              <Link to="/" className="flex items-center">
-                <Activity className="h-8 w-8 text-primary-600" />
-                <span className="ml-2 text-xl font-bold text-primary-800">MedicalBlocks</span>
+              <Link to="/" className="flex items-center text-pink-900">
+                <Activity className="h-8 w-8 text-pink-900" />
+                <span className="ml-2 text-xl font-bold">Med Blocks</span>
               </Link>
             </div>
           </div>
           <div className="flex items-center">
             <div className="ml-3 relative">
               <div className="flex items-center">
-                <div className="h-8 w-8 rounded-full bg-primary-600 flex items-center justify-center text-white font-medium">
+                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center text-pink-600 font-medium">
                   DR
                 </div>
-                <span className="ml-2 text-sm font-medium text-gray-700 hidden md:block">
-                  Dr. Smith
+                <span className="ml-2 text-sm font-medium text-pink-900 hidden md:block">
+                  Nikitha
                 </span>
               </div>
             </div>

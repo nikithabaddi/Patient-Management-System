@@ -41,15 +41,15 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
 
       {/* Sidebar for mobile */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-pink-300 shadow-lg transform transition-transform duration-300 ease-in-out md:hidden ${
           open ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
-          <span className="text-xl font-bold text-primary-800">MedicalBlocks</span>
+        <div className="flex items-center justify-between h-16 px-4 border-b border-pink-400">
+          <span className="text-xl font-bold text-primary-800">MedBlocks</span>
           <button
             type="button"
-            className="rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="rounded-md text-gray-700 hover:text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-500"
             onClick={onClose}
           >
             <span className="sr-only">Close sidebar</span>
@@ -73,7 +73,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
             </NavLink>
           ))}
         </nav>
-        <div className="absolute bottom-0 w-full p-4 border-t border-gray-200">
+        <div className="absolute bottom-0 w-full p-4 border-t border-pink-400">
           <div className="flex items-center">
             <Database className="h-5 w-5 text-secondary-600" />
             <span className="ml-2 text-sm font-medium text-secondary-700">
@@ -86,9 +86,9 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
       {/* Sidebar for desktop */}
       <div className="hidden md:flex md:flex-shrink-0">
         <div className="flex flex-col w-64">
-          <div className="flex flex-col flex-grow border-r border-gray-200 bg-white pt-5 pb-4 overflow-y-auto">
+          <div className="flex flex-col flex-grow border-r border-pink-400 bg-pink-300 pt-5 pb-4 overflow-y-auto">
             <div className="flex items-center flex-shrink-0 px-4">
-              <span className="text-xl font-bold text-primary-800">MedicalBlocks</span>
+              <span className="text-xl font-bold text-primary-800">Med Blocks</span>
             </div>
             <div className="mt-8 flex-grow flex flex-col">
               <nav className="flex-1 px-2 space-y-1">
@@ -108,7 +108,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
                 ))}
               </nav>
             </div>
-            <div className="p-4 border-t border-gray-200">
+            <div className="p-4 border-t border-pink-400">
               <div className="flex items-center">
                 <Database className="h-5 w-5 text-secondary-600" />
                 <span className="ml-2 text-sm font-medium text-secondary-700">
