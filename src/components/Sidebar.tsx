@@ -26,8 +26,8 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
     { to: '/patients', label: 'Patient List', icon: <Users size={20} /> },
   ];
 
-  const activeClass = 'bg-primary-50 text-primary-600 border-l-4 border-primary-600';
-  const inactiveClass = 'text-gray-600 hover:bg-gray-50 hover:text-gray-900';
+  const activeClass = 'bg-pink-400 text-pink-900 border-l-4 border-pink-700 font-bold shadow-sm';
+  const inactiveClass = 'text-pink-800 hover:bg-pink-200 hover:text-pink-900 transition-colors duration-150';
 
   return (
     <>

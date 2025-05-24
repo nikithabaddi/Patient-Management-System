@@ -101,30 +101,33 @@ const PatientQuery: React.FC = () => {
               <button
                 type="button"
                 onClick={() => handleLoadExample('SELECT * FROM patients ORDER BY last_name LIMIT 10')}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                className="btn btn-secondary flex items-center gap-2 px-5 py-2 rounded-full shadow hover:shadow-lg transition"
               >
-                <Clipboard className="h-4 w-4 mr-1" /> Basic query
+                <Clipboard className="h-4 w-4" />
+                <span>Basic query</span>
               </button>
               <button
                 type="button"
                 onClick={() => handleLoadExample("SELECT * FROM patients WHERE last_name LIKE 'S%' ORDER BY last_name")}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                className="btn btn-secondary flex items-center gap-2 px-5 py-2 rounded-full shadow hover:shadow-lg transition"
               >
-                <Clipboard className="h-4 w-4 mr-1" /> Filter by name
+                <Clipboard className="h-4 w-4" />
+                <span>Filter by name</span>
               </button>
               <button
                 type="button"
                 onClick={() => handleLoadExample("SELECT gender, COUNT(*) as count FROM patients GROUP BY gender")}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                className="btn btn-secondary flex items-center gap-2 px-5 py-2 rounded-full shadow hover:shadow-lg transition"
               >
-                <Clipboard className="h-4 w-4 mr-1" /> Statistics
+                <Clipboard className="h-4 w-4" />
+                <span>Statistics</span>
               </button>
             </div>
             <button
               type="button"
               onClick={executeCustomQuery}
               disabled={isExecuting}
-              className="btn btn-primary"
+              className="btn btn-primary flex items-center gap-2"
             >
               {isExecuting ? (
                 <>
@@ -136,7 +139,8 @@ const PatientQuery: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <Database className="h-4 w-4 mr-1" /> Run Query
+                  <Database className="h-4 w-4" />
+                  <span>Run Query</span>
                 </>
               )}
             </button>

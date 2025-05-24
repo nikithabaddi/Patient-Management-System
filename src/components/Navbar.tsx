@@ -8,7 +8,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   return (
-    <nav className="bg-pink-300 border-b border-pink-400 shadow-sm text-pink-900">
+    <nav className="bg-pink-300 border-b border-pink-400 shadow-md text-pink-900">
       <div className="max-w-7xl lg:max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -23,17 +23,17 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             <div className="flex-shrink-0 flex items-center mx-4">
               <Link to="/" className="flex items-center text-pink-900">
                 <Activity className="h-8 w-8 text-pink-900" />
-                <span className="ml-2 text-xl font-bold">Med Blocks</span>
+                <span className="ml-2 text-2xl font-extrabold tracking-tight drop-shadow-sm">Med Blocks</span>
               </Link>
             </div>
           </div>
           <div className="flex items-center">
             <div className="ml-3 relative">
               <div className="flex items-center">
-                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center text-pink-600 font-medium">
+                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center text-pink-600 font-bold shadow">
                   DR
                 </div>
-                <span className="ml-2 text-sm font-medium text-pink-900 hidden md:block">
+                <span className="ml-2 text-base font-bold text-pink-900 hidden md:block">
                   Nikitha
                 </span>
               </div>
