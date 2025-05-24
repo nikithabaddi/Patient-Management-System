@@ -13,17 +13,23 @@ A modern patient management system that runs entirely in your browser using PGli
 - **Modern UI**: Clean, responsive interface built with React
 
 ## 🚀 Demo
-https://patient-system-pglite.vercel.app
+https://patient-management-system-bynikitha.netlify.app/
 
+---
 
-![Screenshot 2025-05-03 115837](https://github.com/user-attachments/assets/feaeec6d-15c7-4b2f-a47d-3317ae896057)
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
 
-![Screenshot 2025-05-03 115553](https://github.com/user-attachments/assets/e813fb4d-33d9-49e0-9b3f-50557b0f5259)
+### Patient Registration
+![Patient Registration](./screenshots/registration.png)
 
-![Screenshot 2025-05-03 115608](https://github.com/user-attachments/assets/56994276-aef8-46b0-9a7b-71d1cf2eb34e)
+### Patient Query
+![Patient Query](./screenshots/query.png)
 
-![Screenshot 2025-05-03 115621](https://github.com/user-attachments/assets/f0ee4c2d-f882-4fec-ab4b-d23d6f04ce7d)
+### Patient List
+![Patient List](./screenshots/patient-list.png)
 
+---
 
 ## 📦 Installation
 
@@ -34,26 +40,22 @@ https://patient-system-pglite.vercel.app
 
 ### Setup Steps
 
-1. Clone the repository:
 
-```bash
-git clone https://github.com/bajpaisushil/Patient_System-Pglite.git
-cd Patient_System-Pglite
 ```
 
-2. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Start the development server:
+2. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+3. Open your browser and navigate to `http://localhost:5173`
 
 ## 🛠️ Project Structure
 
@@ -87,37 +89,10 @@ patient-system-pglite/
 The project uses PGlite to run PostgreSQL directly in the browser. The database is initialized in a Web Worker to support multi-tab operation and persisted using IndexedDB.
 
 ```typescript
-// public/pglite-worker.js
-import { PGlite } from '@electric-sql/pglite';
-import { worker } from '@electric-sql/pglite/worker';
 
-worker({
-  async init() {
-    return new PGlite('idb://my-pgdata');
-  },
-});
-```
 
 ### Database Schema
 
-```sql
-CREATE TABLE IF NOT EXISTS patients (
-  id SERIAL PRIMARY KEY,
-  first_name TEXT NOT NULL,
-  last_name TEXT NOT NULL,
-  date_of_birth TEXT NOT NULL,
-  gender TEXT NOT NULL,
-  email TEXT,
-  phone TEXT,
-  address TEXT,
-  medical_notes TEXT,
-  insurance_provider TEXT,
-  insurance_id TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE INDEX IF NOT EXISTS idx_patient_name ON patients (last_name, first_name);
-```
 
 ## 🔧 Available Scripts
 
@@ -173,7 +148,7 @@ Please make sure to update tests as appropriate.
 
 ## 🙏 Acknowledgements
 
-- [Pglite Docs]([https://electric-sql.com/](https://pglite.dev/docs/)) for developing PGlite
+- [Pglite Docs](https://pglite.dev/docs/) for developing PGlite
 - [Vite](https://vitejs.dev/) for the blazing fast build tool
 - [React](https://reactjs.org/) for the UI library
 
